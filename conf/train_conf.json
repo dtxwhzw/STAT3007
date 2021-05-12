@@ -1,0 +1,22 @@
+{
+  "num_workers":4,
+  "label_map_path": "data/offline_data/multi_data/label_map.json",
+  "model_info": {
+    "model": "bert_seq",
+    "bert_path": "data/online_data/saved_model/bert-base-chinese",
+    "class_num": 5
+  },
+  "train_info":{
+    "max_seq_len": 400,
+    "train_path": "data/offline_data/multi_data/multi_train.json",
+    "valid_path": "data/offline_data/multi_data/multi_val.json",
+    "test_path": "data/offline_data/multi_data/multi_test.json",
+    "model_path": "data/online_data/multi_label_bert_test_v0.cpt",
+    "log_path": "data/offline_data/logs/multi_label_bert_model_v0.cpt_tf_logs",
+    "dropout": 0.5,
+    "lr": 5e-5,
+    "epochs": 10,
+    "eval_steps": 10,
+    "batch_size": 16
+  }
+}
