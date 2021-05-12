@@ -22,7 +22,7 @@ class BertClassifier(BaseModel):
         pretrain_name = 'bert-base-cased'
         if self.bert_path:
             pretrain_name = self.bert_path
-        print(f'Bert Model from: {self.bert_path}')
+        print(f'Bert Model from: {pretrain_name}')
         self.bert = BertModel.from_pretrained(pretrain_name)
         self.drop = nn.Dropout(p=0.3)
         self.classifier = nn.Linear(self.bert.config.hidden_size,conf.class_num)
