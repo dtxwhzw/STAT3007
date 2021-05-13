@@ -46,7 +46,8 @@ class SentimentDataset(BaseDataset):
             add_special_tokens=True,
             max_length=self.max_len,
             return_token_type_ids=False,
-            pad_to_max_length=True,
+            padding='max_length',
+            truncation=True,
             return_attention_mask=True,
             return_tensors='pt'
         )

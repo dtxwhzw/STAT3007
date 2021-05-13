@@ -7,11 +7,20 @@ from sklearn.metrics import *
 
 def cal_accuracy(y_true, y_pred):
     if torch.is_tensor(y_true):
-        y_ture = y_true.cpu().numpy()
+        y_true = y_true.cpu().numpy()
     pred_labels = torch.argmax(y_pred,dim=1)
     pred_labels = pred_labels.cpu().numpy()
-    acc = accuracy_score(y_true,pred_labels)
+    acc = accuracy_score(y_true, pred_labels)
     return acc
+
+
+def cal_recall(y_true, y_pred):
+    if torch.is_tensor(y_true):
+        y_true = y_true.cpu().numpy()
+    pred_labels = torch.argmax(y_pred,dim=1)
+    pred_labels = pred_labels.cpu().numpy()
+    recall = recall_score(y_true, pred_labels, average="macro")
+    return recall
 
 
 def cal_f1(y_true, y_pred):
@@ -19,7 +28,7 @@ def cal_f1(y_true, y_pred):
         y_true = y_true.cpu().numpy()
     pred_labels = torch.argmax(y_pred,dim=1)
     pred_labels = pred_labels.cpu().numpy()
-    f1 = f1_score(y_true,pred_labels)
+    f1 = f1_score(y_true, pred_labels, average="macro")
     return f1
 
 
@@ -28,7 +37,7 @@ def cal_cm(y_true, y_pred):
         y_true = y_true.cpu().numpy()
     pred_labels = torch.argmax(y_pred,dim=1)
     pred_labels = pred_labels.cpu().numpy()
-    cm = confusion_matrix(y_true,pred_labels)
+    cm = confusion_matrix(y_true, pred_labels)
     return cm
 
 

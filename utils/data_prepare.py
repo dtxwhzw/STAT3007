@@ -13,7 +13,7 @@ def prepare(f_path,label_map):
             line = line.strip()
             if len(line) > 1:
                 obj_ = json.loads(line)
-                texts.append(obj_['texts'].strip())
+                texts.append(obj_['text'].strip())
                 cur_labels = obj_['label']
                 raw_labels.append(cur_labels)
 

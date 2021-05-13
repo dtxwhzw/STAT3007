@@ -10,7 +10,7 @@ class BaseModel(nn.Module):
     def __init__(self):
         super(BaseModel,self).__init__()
 
-    def forward(self, x, *wargs, **kwargs):
+    def forward(self, *wargs, **kwargs):
         raise NotImplemented
 
 
@@ -27,9 +27,9 @@ class BertClassifier(BaseModel):
         self.drop = nn.Dropout(p=0.3)
         self.classifier = nn.Linear(self.bert.config.hidden_size,conf.class_num)
 
-    def forward(self,input_ids, attention_mask):
-        outputs = self.bert(input_ids, attention_mask = attention_mask),
-        activated_cls = outputs[1]
+    def forward(self, input_ids, attention_mask):
+        output = self.bert(input_ids, attention_mask = attention_mask)[1],
+        activated_cls = output[0]
         activated_cls = self.drop(activated_cls)
         logits = self.classifier(activated_cls)
         return logits
