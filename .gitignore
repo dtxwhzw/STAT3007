@@ -13,6 +13,7 @@ ipython_config.py
 
 #Data
 Data/reviews.csv.zip
+Data/online_data/saved_models
 
 #.idea
 .idea
