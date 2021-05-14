@@ -29,7 +29,7 @@ And they are in the [Data/offline_data/sentiment](Data/offline_data/sentiment)
 ### How to use
 ```
 git clone https://github.com/dtxwhzw/STAT3007.git
-pip install requirements.txt
+pip install -r requirements.txt
 # train model
 python train.py conf/train_conf.json
 # evaluate model
