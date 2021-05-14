@@ -44,6 +44,9 @@ The training data are in the [Data/offline_data/sentiment](Data/offline_data/sen
 
 And the bert pretrain file should in the [Data/online_data/saved_models/bert-base-cased](Data/online_data/saved_models/bert-base-cased)
 
+If you want to skip the train procedure, and do the evaluation or inference make sure you've downloaded my model from
+[here](https://drive.google.com/drive/folders/1_kJbe03LIUYTHMikYi7XKi7X9yF6BmLq?usp=sharing), and save it in the [Data/online_data](Data/online_data)
+
 The train procedure will need 14555MB RAM in GPU. So, if you encounter the CUDA out of memory issue,
 you can reduce the batch size into 16 or 8 in [configuration file](conf/train_conf.json).
 
