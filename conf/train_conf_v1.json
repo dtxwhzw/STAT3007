@@ -1,0 +1,23 @@
+{
+  "num_workers":4,
+  "label_map_path": "Data/offline_data/sentiment/label_map.json",
+  "model_info": {
+    "model": "bert_seq",
+    "bert_path": "Data/online_data/saved_models/bert-base-cased",
+    "class_num": 3
+  },
+  "train_info":{
+    "max_seq_len": 300,
+    "train_path": "Data/offline_data/sentiment/train.json",
+    "valid_path": "Data/offline_data/sentiment/val.json",
+    "test_path": "Data/offline_data/sentiment/test.json",
+    "model_path": "Data/online_data/sentiment_v1.cpt",
+    "log_path": "Data/offline_data/logs/sentiment_bert_v1.cpt_tf_logs",
+    "train_history_path": "Data/offline_data/logs/train_history_v1.pkl",
+    "dropout": 0.3,
+    "lr": 5e-5,
+    "epochs": 10,
+    "eval_steps": 10,
+    "batch_size": 32
+  }
+}

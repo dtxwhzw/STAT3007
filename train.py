@@ -155,7 +155,7 @@ def parse_args(conf):
     if isinstance(conf, str):
         config = Config.from_json_file(conf)
     else:
-        config = Config.from_dict()
+        config = Config.from_dict(conf)
     return config
 
 

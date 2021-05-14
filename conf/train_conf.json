@@ -1,23 +1,23 @@
 {
   "num_workers":4,
-  "label_map_path": "data/offline_data/multi_data/label_map.json",
+  "label_map_path": "Data/offline_data/sentiment/label_map.json",
   "model_info": {
     "model": "bert_seq",
-    "bert_path": "data/online_data/saved_model/bert-base-chinese",
-    "class_num": 5
+    "bert_path": "Data/online_data/saved_models/bert-base-cased",
+    "class_num": 3
   },
   "train_info":{
-    "max_seq_len": 400,
-    "train_path": "data/offline_data/multi_data/multi_train.json",
-    "valid_path": "data/offline_data/multi_data/multi_val.json",
-    "test_path": "data/offline_data/multi_data/multi_test.json",
-    "model_path": "data/online_data/multi_label_bert_test_v0.cpt",
-    "log_path": "data/offline_data/logs/multi_label_bert_model_v0.cpt_tf_logs",
-    "train_history_path": "data/offline_data/logs/train_history.json",
+    "max_seq_len": 200,
+    "train_path": "Data/offline_data/sentiment/train.json",
+    "valid_path": "Data/offline_data/sentiment/val.json",
+    "test_path": "Data/offline_data/sentiment/test.json",
+    "model_path": "Data/online_data/sentiment_v0.cpt",
+    "log_path": "Data/offline_data/logs/sentiment_bert_v0.cpt_tf_logs",
+    "train_history_path": "Data/offline_data/logs/train_history.pkl",
     "dropout": 0.5,
     "lr": 5e-5,
     "epochs": 10,
     "eval_steps": 10,
-    "batch_size": 16
+    "batch_size": 32
   }
 }
