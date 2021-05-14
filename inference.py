@@ -80,6 +80,7 @@ if __name__ == '__main__':
     t_predictor = Predictor(t_args)
     t0 = time()
     # input_str = sys.argv[2]
+    # you can change the input_str as you want
     input_str = ['Always on the search for the optimal GTD program. Was hooked several years to omnifocus and things and stumbled upon todoist by chance. Well, for me the best presently, better file and email integration, top design and flexibility']
     res = t_predictor.predict(input_str)
     print(res)
