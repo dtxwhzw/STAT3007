@@ -36,7 +36,7 @@ python train.py conf/train_conf.json
 python train.py conf/train_conf.json
 # inference
 python inference.py conf/train_conf.json
-# you can replace the input_str in line 84 with whatever sentence as you want
+# you can replace the input_str in line 84 with whatever sentence you want
 ```
 
 ### Tips
