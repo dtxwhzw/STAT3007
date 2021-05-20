@@ -20,7 +20,7 @@ class Predictor(object):
         print(f"Tokenizer from:{pretrain_name}")
         train_conf = args.train_info
         model_conf = args.model_info
-        self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
+        self.device = train_conf.device
         self.class_num = model_conf.class_num
         self.model = BertClassifier(model_conf)
         self.model.load_state_dict(torch.load(train_conf.model_path, map_location=torch.device(self.device)))

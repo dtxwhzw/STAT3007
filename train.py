@@ -29,7 +29,7 @@ class Train(object):
         train_conf = args.train_info
         model_conf = args.model_info
         self.model = BertClassifier(model_conf)
-        self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
+        self.device = train_conf.device
         self.class_num = model_conf.class_num
         self.model.to(self.device)
         self.lr = train_conf.lr

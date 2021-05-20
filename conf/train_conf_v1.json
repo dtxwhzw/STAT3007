@@ -3,7 +3,7 @@
   "label_map_path": "Data/offline_data/sentiment/label_map.json",
   "model_info": {
     "model": "bert_seq",
-    "bert_path": "Data/online_data/saved_models/bert-base-cased",
+    "bert_path": "",
     "class_num": 3
   },
   "train_info":{

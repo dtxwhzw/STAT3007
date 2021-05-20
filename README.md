@@ -40,6 +40,8 @@ python inference.py conf/train_conf.json
 ```
 
 ### Tips
+If you have GPU and want to use it, you can replace 'cpu' with 'cuda' in the [conf/train_conf.json](conf/train_conf.json)
+
 The training data are in the [Data/offline_data/sentiment](Data/offline_data/sentiment).
 
 And the bert pretrain file should in the [Data/online_data/saved_models/bert-base-cased](Data/online_data/saved_models/bert-base-cased)
