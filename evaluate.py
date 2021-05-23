@@ -37,17 +37,25 @@ class Evaluator(object):
     def run(self, batch_size=64):
         test_path = self.conf.train_info.test_path
         test_loader = self.get_data_loader(test_path,batch_size)
-        acc, recall, f1_score, cm, report = self.evaluate(test_loader)
+        acc, recall, f1_score, cm, report,res = self.evaluate(test_loader)
         print(f"Accuracy score of the model is {acc}")
         print(f"Recall score of the model is {recall}")
         print(f"F1 score of the model is {f1_score}")
         print(f"Confusion matrix of the model is {cm}")
         print(report)
+        dir_ = os.path.dirname(test_path)
+        dir_ = os.path.dirname(dir_)
+        dir_ = os.path.split(dir_)[0]
+        new_path = os.path.join(dir_,'logs','bad_case.json')
+        f = open(new_path,'w')
+        for i in res:
+            print(json.dumps(i,ensure_ascii=False),file=f)
 
     def evaluate(self, _loader):
         self.model.eval()
         y_true = list()
         y_pred = list()
+        res = []
         with torch.no_grad():
             for batch in _loader:
                 input_ids = batch['input_ids'].to(self.device)
@@ -58,6 +66,19 @@ class Evaluator(object):
                 logits = self.model(input_ids, attention_mask)
                 y_true.append(y)
                 y_pred.append(logits)
+                pred_labels = torch.argmax(logits,dim=1)
+                preds = pred_labels.cpu().numpy()
+                true = batch['labels'].squeeze().numpy()
+                if len(true) < 1:
+                    continue
+                for i, c_y in enumerate(true):
+                    if c_y != preds[i]:
+                        tmp_dict = {
+                            'true_label':self.id2label[c_y],
+                            'pred_label':self.id2label[preds[i]],
+                            'text': batch['text'][i]
+                        }
+                        res.append(tmp_dict)
             y_true = torch.cat(y_true)
             y_pred = torch.cat(y_pred)
         cm = metrics.cal_cm(y_true, y_pred)
@@ -67,7 +88,7 @@ class Evaluator(object):
         label_range = [i for i in range(len(self.label_map))]
         target_name = [x[0] for x in sorted(self.label_map.items(), key=lambda x: x[1])]
         report = metrics.get_classification_report(y_true, y_pred, label_range, target_name)
-        return acc_score, recall, f1_score, cm, report
+        return acc_score, recall, f1_score, cm, report, res
 
     def get_data_loader(self,f_path,batch_size):
         np.random.seed(14)
