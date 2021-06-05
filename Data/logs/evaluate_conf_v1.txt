@@ -1,0 +1,18 @@
+Tokenizer from:Data/online_data/saved_models/bert-base-cased
+Bert Model from: Data/online_data/saved_models/bert-base-cased
+Accuracy score of the model is 0.863941427699817
+Recall score of the model is 0.8626222342449319
+F1 score of the model is 0.862792198333147
+Confusion matrix of the model is [[526  11  49]
+ [ 13 454  63]
+ [ 36  51 436]]
+              precision    recall  f1-score   support
+
+    positive     0.9148    0.8976    0.9061       586
+    negative     0.8798    0.8566    0.8681       530
+     netural     0.7956    0.8337    0.8142       523
+
+    accuracy                         0.8639      1639
+   macro avg     0.8634    0.8626    0.8628      1639
+weighted avg     0.8655    0.8639    0.8645      1639
+

@@ -1,4 +1,5 @@
 # STAT3007
+The Github link is [stat3007](https://github.com/dtxwhzw/STAT3007)
 ### Introduction
 This is the Project of UQ STAT3007, we used the BERT model to build a sentiment classifier based on some
 app's reviews data.
@@ -32,6 +33,7 @@ git clone https://github.com/dtxwhzw/STAT3007.git
 pip install -r requirements.txt
 # train model
 python train.py conf/train_conf.json
+# Ths train_conf.json use cpu and the train_conf_v1.json use gpu
 # evaluate model
 python train.py conf/train_conf.json
 # inference
@@ -62,3 +64,17 @@ as for the [second configuration file](conf/train_conf_v1.json) is 0.86.
 
 You can switch the parameters in the configuration file and train some new models. It is reocommend to switch the *max_seq_len* in [200,500],
  *drop_out* , *lr*, and *batch* parameters(the batch size larger the result would be better).
+ 
+ The evaluation result for these two configuration file is in the [log path](Data/logs).
+
+And the [bad_case](Data/logs/bad_case.json) file is the mis-prediction of the model in the [second configuration file](conf/train_conf_v1.json).
+ 
+ ### Update
+ Add GPT2 pretrain model, 'gpt2' from huggingface repository. Use the GPT2ForSequenceClassification model to do the classification.
+ I set the same hyper-parameter with the BERT model. It seem that the GPT2 model would cost more memory 
+ in GPU(more than 20,000 MB) and i would spend more time in train process.
+ 
+ You can use this command to train the gpt2 model.
+ ```shell script
+python train_gpt2.py conf/train_conf_gpt2.json
+```
