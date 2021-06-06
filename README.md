@@ -62,6 +62,8 @@ and the vocab file from "https://s3.amazonaws.com/models.huggingface.co/bert/ber
 The f1 score of the [first configuration file](conf/train_conf.json) is 0.84
 as for the [second configuration file](conf/train_conf_v1.json) is 0.86.
 
+The result of GPT2 model is more than 0.86, which is quite same as the BERT model.
+
 You can switch the parameters in the configuration file and train some new models. It is reocommend to switch the *max_seq_len* in [200,500],
  *drop_out* , *lr*, and *batch* parameters(the batch size larger the result would be better).
  

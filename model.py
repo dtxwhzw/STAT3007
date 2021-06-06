@@ -51,4 +51,4 @@ class GPT2Classifier(BaseModel):
 
     def forward(self, input_ids, attention_mask):
         outputs = self.gpt(input_ids,attention_mask=attention_mask)
-        return outputs.loss, outputs.logits
+        return outputs.logits

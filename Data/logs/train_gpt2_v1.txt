@@ -1,0 +1,572 @@
+Tokenizer from:Data/online_data/saved_models/gpt2
+GPT Model from Data/online_data/saved_models/gpt2
+
+
+
+Following is validation metrics at epoch 0
+Accuracy of the model is 0.6935286935286935
+F1 score is : 0.6849578671326886, and best_f1 is 0.6849578671326886
+Confusion matrix is: [[477  18  91]
+ [ 22 397 111]
+ [113 147 262]]
+              precision    recall  f1-score   support
+
+    positive     0.7794    0.8140    0.7963       586
+    negative     0.7064    0.7491    0.7271       530
+     netural     0.5647    0.5019    0.5314       522
+
+    accuracy                         0.6935      1638
+   macro avg     0.6835    0.6883    0.6850      1638
+weighted avg     0.6874    0.6935    0.6895      1638
+
+
+
+
+Following is train metrics at epoch 0
+Accuracy of the model is 0.7177942185950729
+F1 score is : 0.7096158807795522
+Confusion matrix is: [[3916  141  631]
+ [ 151 3263  828]
+ [ 760 1189 2232]]
+              precision    recall  f1-score   support
+
+    positive     0.8113    0.8353    0.8231      4688
+    negative     0.7104    0.7692    0.7387      4242
+     netural     0.6047    0.5338    0.5671      4181
+
+    accuracy                         0.7178     13111
+   macro avg     0.7088    0.7128    0.7096     13111
+weighted avg     0.7128    0.7178    0.7141     13111
+
+
+
+
+Following is validation metrics at epoch 1
+Accuracy of the model is 0.7032967032967034
+F1 score is : 0.6981637285480992, and best_f1 is 0.6981637285480992
+Confusion matrix is: [[499  13  74]
+ [ 22 341 167]
+ [127  83 312]]
+              precision    recall  f1-score   support
+
+    positive     0.7701    0.8515    0.8088       586
+    negative     0.7803    0.6434    0.7053       530
+     netural     0.5642    0.5977    0.5805       522
+
+    accuracy                         0.7033      1638
+   macro avg     0.7049    0.6975    0.6982      1638
+weighted avg     0.7078    0.7033    0.7025      1638
+
+
+
+
+Following is train metrics at epoch 1
+Accuracy of the model is 0.7727862100526276
+F1 score is : 0.7677901548858462
+Confusion matrix is: [[4260   53  375]
+ [ 139 3010 1093]
+ [ 768  551 2862]]
+              precision    recall  f1-score   support
+
+    positive     0.8245    0.9087    0.8645      4688
+    negative     0.8329    0.7096    0.7663      4242
+     netural     0.6610    0.6845    0.6725      4181
+
+    accuracy                         0.7728     13111
+   macro avg     0.7728    0.7676    0.7678     13111
+weighted avg     0.7750    0.7728    0.7715     13111
+
+
+
+
+Following is validation metrics at epoch 2
+Accuracy of the model is 0.7673992673992674
+F1 score is : 0.7631086037895062, and best_f1 is 0.7631086037895062
+Confusion matrix is: [[491  19  76]
+ [ 20 431  79]
+ [ 76 111 335]]
+              precision    recall  f1-score   support
+
+    positive     0.8365    0.8379    0.8372       586
+    negative     0.7683    0.8132    0.7901       530
+     netural     0.6837    0.6418    0.6621       522
+
+    accuracy                         0.7674      1638
+   macro avg     0.7628    0.7643    0.7631      1638
+weighted avg     0.7657    0.7674    0.7661      1638
+
+
+
+
+Following is train metrics at epoch 2
+Accuracy of the model is 0.8685836320646785
+F1 score is : 0.8648594658291192
+Confusion matrix is: [[4411   31  246]
+ [  50 3783  409]
+ [ 339  648 3194]]
+              precision    recall  f1-score   support
+
+    positive     0.9190    0.9409    0.9298      4688
+    negative     0.8478    0.8918    0.8693      4242
+     netural     0.8298    0.7639    0.7955      4181
+
+    accuracy                         0.8686     13111
+   macro avg     0.8655    0.8655    0.8649     13111
+weighted avg     0.8675    0.8686    0.8674     13111
+
+
+
+
+Following is validation metrics at epoch 3
+Accuracy of the model is 0.757020757020757
+F1 score is : 0.7604814955985121, and best_f1 is 0.7631086037895062
+Confusion matrix is: [[426  13 147]
+ [ 12 400 118]
+ [ 39  69 414]]
+              precision    recall  f1-score   support
+
+    positive     0.8931    0.7270    0.8015       586
+    negative     0.8299    0.7547    0.7905       530
+     netural     0.6097    0.7931    0.6894       522
+
+    accuracy                         0.7570      1638
+   macro avg     0.7776    0.7583    0.7605      1638
+weighted avg     0.7823    0.7570    0.7622      1638
+
+
+
+
+Following is train metrics at epoch 3
+Accuracy of the model is 0.9119060331019755
+F1 score is : 0.9121220398687647
+Confusion matrix is: [[4228   13  447]
+ [  30 3859  353]
+ [ 130  182 3869]]
+              precision    recall  f1-score   support
+
+    positive     0.9635    0.9019    0.9317      4688
+    negative     0.9519    0.9097    0.9303      4242
+     netural     0.8287    0.9254    0.8744      4181
+
+    accuracy                         0.9119     13111
+   macro avg     0.9147    0.9123    0.9121     13111
+weighted avg     0.9168    0.9119    0.9130     13111
+
+
+
+
+Following is validation metrics at epoch 4
+Accuracy of the model is 0.8052503052503053
+F1 score is : 0.8009953187886353, and best_f1 is 0.8009953187886353
+Confusion matrix is: [[502  23  61]
+ [ 15 463  52]
+ [ 64 104 354]]
+              precision    recall  f1-score   support
+
+    positive     0.8640    0.8567    0.8603       586
+    negative     0.7847    0.8736    0.8268       530
+     netural     0.7580    0.6782    0.7159       522
+
+    accuracy                         0.8053      1638
+   macro avg     0.8023    0.8028    0.8010      1638
+weighted avg     0.8046    0.8053    0.8034      1638
+
+
+
+
+Following is train metrics at epoch 4
+Accuracy of the model is 0.952864007322096
+F1 score is : 0.9514883437018429
+Confusion matrix is: [[4642    6   40]
+ [  34 4147   61]
+ [ 163  314 3704]]
+              precision    recall  f1-score   support
+
+    positive     0.9593    0.9902    0.9745      4688
+    negative     0.9284    0.9776    0.9523      4242
+     netural     0.9735    0.8859    0.9276      4181
+
+    accuracy                         0.9529     13111
+   macro avg     0.9537    0.9512    0.9515     13111
+weighted avg     0.9538    0.9529    0.9524     13111
+
+
+
+
+Following is validation metrics at epoch 5
+Accuracy of the model is 0.8083028083028083
+F1 score is : 0.8079934552753657, and best_f1 is 0.8079934552753657
+Confusion matrix is: [[498  13  75]
+ [ 19 419  92]
+ [ 70  45 407]]
+              precision    recall  f1-score   support
+
+    positive     0.8484    0.8498    0.8491       586
+    negative     0.8784    0.7906    0.8322       530
+     netural     0.7091    0.7797    0.7427       522
+
+    accuracy                         0.8083      1638
+   macro avg     0.8119    0.8067    0.8080      1638
+weighted avg     0.8137    0.8083    0.8097      1638
+
+
+
+
+Following is train metrics at epoch 5
+Accuracy of the model is 0.9750591106704294
+F1 score is : 0.9748464636909261
+Confusion matrix is: [[4664    2   22]
+ [  29 4096  117]
+ [ 142   15 4024]]
+              precision    recall  f1-score   support
+
+    positive     0.9646    0.9949    0.9795      4688
+    negative     0.9959    0.9656    0.9805      4242
+     netural     0.9666    0.9624    0.9645      4181
+
+    accuracy                         0.9751     13111
+   macro avg     0.9757    0.9743    0.9748     13111
+weighted avg     0.9754    0.9751    0.9751     13111
+
+
+
+
+Following is validation metrics at epoch 6
+Accuracy of the model is 0.8327228327228328
+F1 score is : 0.8316847686316585, and best_f1 is 0.8316847686316585
+Confusion matrix is: [[506  18  62]
+ [ 19 449  62]
+ [ 63  50 409]]
+              precision    recall  f1-score   support
+
+    positive     0.8605    0.8635    0.8620       586
+    negative     0.8685    0.8472    0.8577       530
+     netural     0.7674    0.7835    0.7754       522
+
+    accuracy                         0.8327      1638
+   macro avg     0.8321    0.8314    0.8317      1638
+weighted avg     0.8334    0.8327    0.8330      1638
+
+
+
+
+Following is train metrics at epoch 6
+Accuracy of the model is 0.9840591869422622
+F1 score is : 0.9840715801053291
+Confusion matrix is: [[4680    1    7]
+ [  32 4180   30]
+ [ 123   16 4042]]
+              precision    recall  f1-score   support
+
+    positive     0.9679    0.9983    0.9829      4688
+    negative     0.9959    0.9854    0.9906      4242
+     netural     0.9909    0.9668    0.9787      4181
+
+    accuracy                         0.9841     13111
+   macro avg     0.9849    0.9835    0.9841     13111
+weighted avg     0.9843    0.9841    0.9841     13111
+
+
+
+
+Following is validation metrics at epoch 7
+Accuracy of the model is 0.8351648351648352
+F1 score is : 0.8348649975894422, and best_f1 is 0.8348649975894422
+Confusion matrix is: [[500  14  72]
+ [ 16 447  67]
+ [ 55  46 421]]
+              precision    recall  f1-score   support
+
+    positive     0.8757    0.8532    0.8643       586
+    negative     0.8817    0.8434    0.8621       530
+     netural     0.7518    0.8065    0.7782       522
+
+    accuracy                         0.8352      1638
+   macro avg     0.8364    0.8344    0.8349      1638
+weighted avg     0.8381    0.8352    0.8361      1638
+
+
+
+
+Following is train metrics at epoch 7
+Accuracy of the model is 0.9867287010906872
+F1 score is : 0.986794539753312
+Confusion matrix is: [[4679    1    8]
+ [  28 4191   23]
+ [ 110    4 4067]]
+              precision    recall  f1-score   support
+
+    positive     0.9714    0.9981    0.9845      4688
+    negative     0.9988    0.9880    0.9934      4242
+     netural     0.9924    0.9727    0.9825      4181
+
+    accuracy                         0.9867     13111
+   macro avg     0.9875    0.9863    0.9868     13111
+weighted avg     0.9870    0.9867    0.9867     13111
+
+
+
+
+Following is validation metrics at epoch 8
+Accuracy of the model is 0.8394383394383395
+F1 score is : 0.8387140416634393, and best_f1 is 0.8387140416634393
+Confusion matrix is: [[503  18  65]
+ [ 17 453  60]
+ [ 53  50 419]]
+              precision    recall  f1-score   support
+
+    positive     0.8778    0.8584    0.8680       586
+    negative     0.8695    0.8547    0.8620       530
+     netural     0.7702    0.8027    0.7861       522
+
+    accuracy                         0.8394      1638
+   macro avg     0.8392    0.8386    0.8387      1638
+weighted avg     0.8408    0.8394    0.8400      1638
+
+
+
+
+Following is train metrics at epoch 8
+Accuracy of the model is 0.9883304095797422
+F1 score is : 0.9884215377737137
+Confusion matrix is: [[4677    1   10]
+ [  28 4203   11]
+ [  98    5 4078]]
+              precision    recall  f1-score   support
+
+    positive     0.9738    0.9977    0.9856      4688
+    negative     0.9986    0.9908    0.9947      4242
+     netural     0.9949    0.9754    0.9850      4181
+
+    accuracy                         0.9883     13111
+   macro avg     0.9891    0.9879    0.9884     13111
+weighted avg     0.9885    0.9883    0.9883     13111
+
+
+
+
+Following is validation metrics at epoch 9
+Accuracy of the model is 0.8394383394383395
+F1 score is : 0.838923345847892, and best_f1 is 0.838923345847892
+Confusion matrix is: [[508  14  64]
+ [ 20 440  70]
+ [ 52  43 427]]
+              precision    recall  f1-score   support
+
+    positive     0.8759    0.8669    0.8714       586
+    negative     0.8853    0.8302    0.8569       530
+     netural     0.7611    0.8180    0.7886       522
+
+    accuracy                         0.8394      1638
+   macro avg     0.8408    0.8384    0.8389      1638
+weighted avg     0.8424    0.8394    0.8403      1638
+
+
+
+
+Following is train metrics at epoch 9
+Accuracy of the model is 0.9888643124094272
+F1 score is : 0.9889780273557226
+Confusion matrix is: [[4685    1    2]
+ [  28 4207    7]
+ [ 106    2 4073]]
+              precision    recall  f1-score   support
+
+    positive     0.9722    0.9994    0.9856      4688
+    negative     0.9993    0.9917    0.9955      4242
+     netural     0.9978    0.9742    0.9858      4181
+
+    accuracy                         0.9889     13111
+   macro avg     0.9898    0.9884    0.9890     13111
+weighted avg     0.9891    0.9889    0.9889     13111
+
+
+
+
+Following is validation metrics at epoch 10
+Accuracy of the model is 0.8296703296703297
+F1 score is : 0.8296130487289899, and best_f1 is 0.838923345847892
+Confusion matrix is: [[491  16  79]
+ [ 15 445  70]
+ [ 48  51 423]]
+              precision    recall  f1-score   support
+
+    positive     0.8863    0.8379    0.8614       586
+    negative     0.8691    0.8396    0.8541       530
+     netural     0.7395    0.8103    0.7733       522
+
+    accuracy                         0.8297      1638
+   macro avg     0.8316    0.8293    0.8296      1638
+weighted avg     0.8340    0.8297    0.8310      1638
+
+
+
+
+Following is train metrics at epoch 10
+Accuracy of the model is 0.9888643124094272
+F1 score is : 0.9889742806681131
+Confusion matrix is: [[4678    1    9]
+ [  28 4207    7]
+ [  98    3 4080]]
+              precision    recall  f1-score   support
+
+    positive     0.9738    0.9979    0.9857      4688
+    negative     0.9991    0.9917    0.9954      4242
+     netural     0.9961    0.9758    0.9859      4181
+
+    accuracy                         0.9889     13111
+   macro avg     0.9896    0.9885    0.9890     13111
+weighted avg     0.9891    0.9889    0.9889     13111
+
+
+
+
+Following is validation metrics at epoch 11
+Accuracy of the model is 0.8351648351648352
+F1 score is : 0.834276685998547, and best_f1 is 0.838923345847892
+Confusion matrix is: [[495  18  73]
+ [ 18 462  50]
+ [ 51  60 411]]
+              precision    recall  f1-score   support
+
+    positive     0.8777    0.8447    0.8609       586
+    negative     0.8556    0.8717    0.8636       530
+     netural     0.7697    0.7874    0.7784       522
+
+    accuracy                         0.8352      1638
+   macro avg     0.8343    0.8346    0.8343      1638
+weighted avg     0.8361    0.8352    0.8355      1638
+
+
+
+
+Following is train metrics at epoch 11
+Accuracy of the model is 0.9894744870719243
+F1 score is : 0.9895935828497024
+Confusion matrix is: [[4684    1    3]
+ [  28 4210    4]
+ [ 100    2 4079]]
+              precision    recall  f1-score   support
+
+    positive     0.9734    0.9991    0.9861      4688
+    negative     0.9993    0.9925    0.9959      4242
+     netural     0.9983    0.9756    0.9868      4181
+
+    accuracy                         0.9895     13111
+   macro avg     0.9903    0.9891    0.9896     13111
+weighted avg     0.9897    0.9895    0.9895     13111
+
+
+
+
+Following is validation metrics at epoch 12
+Accuracy of the model is 0.8321123321123322
+F1 score is : 0.8313577165497971, and best_f1 is 0.838923345847892
+Confusion matrix is: [[498  19  69]
+ [ 22 452  56]
+ [ 56  53 413]]
+              precision    recall  f1-score   support
+
+    positive     0.8646    0.8498    0.8571       586
+    negative     0.8626    0.8528    0.8577       530
+     netural     0.7677    0.7912    0.7792       522
+
+    accuracy                         0.8321      1638
+   macro avg     0.8316    0.8313    0.8314      1638
+weighted avg     0.8331    0.8321    0.8325      1638
+
+
+
+
+Following is train metrics at epoch 12
+Accuracy of the model is 0.9894744870719243
+F1 score is : 0.9895935828497024
+Confusion matrix is: [[4684    1    3]
+ [  28 4210    4]
+ [ 100    2 4079]]
+              precision    recall  f1-score   support
+
+    positive     0.9734    0.9991    0.9861      4688
+    negative     0.9993    0.9925    0.9959      4242
+     netural     0.9983    0.9756    0.9868      4181
+
+    accuracy                         0.9895     13111
+   macro avg     0.9903    0.9891    0.9896     13111
+weighted avg     0.9897    0.9895    0.9895     13111
+
+
+
+
+Following is validation metrics at epoch 13
+Accuracy of the model is 0.8357753357753358
+F1 score is : 0.8351202411010709, and best_f1 is 0.838923345847892
+Confusion matrix is: [[505  16  65]
+ [ 22 446  62]
+ [ 58  46 418]]
+              precision    recall  f1-score   support
+
+    positive     0.8632    0.8618    0.8625       586
+    negative     0.8780    0.8415    0.8593       530
+     netural     0.7670    0.8008    0.7835       522
+
+    accuracy                         0.8358      1638
+   macro avg     0.8361    0.8347    0.8351      1638
+weighted avg     0.8373    0.8358    0.8363      1638
+
+
+
+
+Following is train metrics at epoch 13
+Accuracy of the model is 0.9895507589047364
+F1 score is : 0.9896651977275931
+Confusion matrix is: [[4683    1    4]
+ [  28 4209    5]
+ [  97    2 4082]]
+              precision    recall  f1-score   support
+
+    positive     0.9740    0.9989    0.9863      4688
+    negative     0.9993    0.9922    0.9957      4242
+     netural     0.9978    0.9763    0.9869      4181
+
+    accuracy                         0.9896     13111
+   macro avg     0.9904    0.9892    0.9897     13111
+weighted avg     0.9898    0.9896    0.9896     13111
+
+
+
+
+Following is validation metrics at epoch 14
+Accuracy of the model is 0.8333333333333334
+F1 score is : 0.8328223432049722, and best_f1 is 0.838923345847892
+Confusion matrix is: [[502  16  68]
+ [ 21 444  65]
+ [ 57  46 419]]
+              precision    recall  f1-score   support
+
+    positive     0.8655    0.8567    0.8611       586
+    negative     0.8775    0.8377    0.8571       530
+     netural     0.7591    0.8027    0.7803       522
+
+    accuracy                         0.8333      1638
+   macro avg     0.8340    0.8324    0.8328      1638
+weighted avg     0.8355    0.8333    0.8340      1638
+
+
+
+
+Following is train metrics at epoch 14
+Accuracy of the model is 0.9894744870719243
+F1 score is : 0.9895936705776868
+Confusion matrix is: [[4683    1    4]
+ [  28 4210    4]
+ [  99    2 4080]]
+              precision    recall  f1-score   support
+
+    positive     0.9736    0.9989    0.9861      4688
+    negative     0.9993    0.9925    0.9959      4242
+     netural     0.9980    0.9758    0.9868      4181
+
+    accuracy                         0.9895     13111
+   macro avg     0.9903    0.9891    0.9896     13111
+weighted avg     0.9897    0.9895    0.9895     13111
+

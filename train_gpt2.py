@@ -108,7 +108,7 @@ class Train(object):
             y = batch['labels']
             y = torch.squeeze(y,1)
             y = y.to(self.device)
-            _, logits = self.model(input_ids,attention_mask)
+            logits = self.model(input_ids,attention_mask)
             loss = criterion(logits,y)
             # import ipdb; ipdb.set_trace()
             loss_arr.append(loss)
@@ -131,7 +131,7 @@ class Train(object):
                 y = batch['labels']
                 y = torch.squeeze(y, 1)
                 y = y.to(self.device)
-                _, logits = self.model(input_ids, attention_mask)
+                logits = self.model(input_ids, attention_mask)
                 y_true.append(y)
                 y_pred.append(logits)
         y_true = torch.cat(y_true)

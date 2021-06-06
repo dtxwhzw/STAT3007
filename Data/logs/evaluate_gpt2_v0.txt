@@ -1,0 +1,18 @@
+Tokenizer from:Data/online_data/saved_models/gpt2
+GPT Model from Data/online_data/saved_models/gpt2
+Accuracy score of the model is 0.8663819402074435
+Recall score of the model is 0.865003272521926
+F1 score of the model is 0.8646913712144769
+Confusion matrix of the model is [[526  11  49]
+ [ 11 474  45]
+ [ 42  61 420]]
+              precision    recall  f1-score   support
+
+    positive     0.9085    0.8976    0.9030       586
+    negative     0.8681    0.8943    0.8810       530
+     netural     0.8171    0.8031    0.8100       523
+
+    accuracy                         0.8664      1639
+   macro avg     0.8646    0.8650    0.8647      1639
+weighted avg     0.8663    0.8664    0.8662      1639
+

@@ -6,9 +6,9 @@ import pickle
 import numpy as np
 import json
 from torch.utils.data import dataloader
-from model import BertClassifier
-from dataset import SentimentDataset
-from transformers import BertTokenizer
+from model import BertClassifier, GPT2Classifier
+from dataset import SentimentDataset,GPT2Dataset
+from transformers import BertTokenizer, GPT2Tokenizer
 from utils.data_prepare import prepare
 from utils import metrics
 from utils.conf_utils import Config
@@ -19,11 +19,18 @@ class Evaluator(object):
         pretrain_name = 'bert-base-cased'
         if args.model_info.bert_path:
             pretrain_name = args.model_info.bert_path
-        self.tokenizer = BertTokenizer.from_pretrained(pretrain_name)
         print(f"Tokenizer from:{pretrain_name}")
         train_conf = args.train_info
         model_conf = args.model_info
-        self.model = BertClassifier(model_conf)
+        self.model_type = model_conf.model
+        if self.model_type == 'bert_seq':
+            self.model = BertClassifier(model_conf)
+            self.tokenizer = BertTokenizer.from_pretrained(pretrain_name)
+            self.ds = SentimentDataset
+        if self.model_type == 'GPT2':
+            self.model = GPT2Classifier(model_conf)
+            self.tokenizer = GPT2Tokenizer.from_pretrained(pretrain_name)
+            self.ds = GPT2Dataset
         self.model.load_state_dict(torch.load(train_conf.model_path))
         self.device = train_conf.device
         self.class_num = model_conf.class_num
@@ -93,7 +100,7 @@ class Evaluator(object):
     def get_data_loader(self,f_path,batch_size):
         np.random.seed(14)
         texts, labels = prepare(f_path,self.label_map)
-        ds = SentimentDataset(self.tokenizer, texts, labels, self.max_len)
+        ds = self.ds(self.tokenizer, texts, labels, self.max_len)
         return dataloader.DataLoader(ds, batch_size=batch_size, num_workers=self.conf.num_workers, shuffle=True)
 
 
