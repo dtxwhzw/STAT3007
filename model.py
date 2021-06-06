@@ -3,7 +3,7 @@
 import torch
 from torch import nn
 from torch.nn import functional as F
-from transformers import BertModel, GPT2ForSequenceClassification
+from transformers import BertModel, GPT2ForSequenceClassification, GPT2Model
 
 
 class BaseModel(nn.Module):
@@ -52,3 +52,30 @@ class GPT2Classifier(BaseModel):
     def forward(self, input_ids, attention_mask):
         outputs = self.gpt(input_ids,attention_mask=attention_mask)
         return outputs.logits
+
+
+class GPT2Average(BaseModel):
+    """
+    using average pooling for the last hidden state for classification.
+    """
+    def __init__(self,conf):
+        super(GPT2Average, self).__init__()
+        self.conf = conf
+        self.padding = 0
+        self.gpt_path = getattr(conf, 'bert_path', None)
+        pretrain_name = 'gpt2'
+        if self.gpt_path :
+            pretrain_name = self.gpt_path
+        print('GPT Model from {}'.format(pretrain_name))
+        self.gpt = GPT2Model.from_pretrained(pretrain_name, num_labels=conf.class_num)
+        self.gpt.config.pad_token_id = self.gpt.config.eos_token_id
+        self.drop = nn.Dropout(p=0.3)
+        self.classifer = nn.Linear(self.gpt.config.n_embd,conf.class_num)
+
+    def forward(self, input_ids, attention_mask) :
+        outputs = self.gpt(input_ids, attention_mask=attention_mask)
+        outputs = torch.mean(outputs.last_hidden_state,dim=1,keepdim=True)
+        outputs = outputs.view(outputs.shape[0],outputs.shape[-1])
+        outputs = self.drop(outputs)
+        outputs = self.classifer(outputs)
+        return outputs
