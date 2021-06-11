@@ -1,0 +1,24 @@
+{
+  "num_workers":4,
+  "label_map_path": "Data/offline_data/sentiment/label_map.json",
+  "model_info": {
+    "model": "GPT2",
+    "bert_path": "",
+    "class_num": 3
+  },
+  "train_info":{
+    "max_seq_len": 300,
+    "train_path": "Data/offline_data/sentiment/train.json",
+    "valid_path": "Data/offline_data/sentiment/val.json",
+    "test_path": "Data/offline_data/sentiment/test.json",
+    "model_path": "Data/online_data/sentiment_gpt_v2.cpt",
+    "log_path": "Data/offline_data/logs/sentiment_gpt_v2.cpt_tf_logs",
+    "train_history_path": "Data/offline_data/logs/train_history_gpt_v2.pkl",
+    "dropout": 0.3,
+    "lr": 5e-5,
+    "epochs": 10,
+    "eval_steps": 10,
+    "batch_size": 32,
+    "device": "cuda"
+  }
+}

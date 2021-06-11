@@ -3,7 +3,7 @@
   "label_map_path": "Data/offline_data/sentiment/label_map.json",
   "model_info": {
     "model": "GPT2",
-    "bert_path": "Data/online_data/saved_models/gpt2",
+    "bert_path": "",
     "class_num": 3
   },
   "train_info":{
